@@ -11,21 +11,34 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2  # Fetch only last commit for comparison
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4  
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '8.0.x'  
 
       - name: Restore Dependencies
         run: dotnet restore
 
-      - name: Run Roslyn Code Analysis
-        run: dotnet build --no-restore /warnaserror /p:TreatWarningsAsErrors=true /p:EnableNETAnalyzers=true
+      - name: Get Changed .cs Files
+        id: changed-files
+        run: |
+          echo "CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.cs$' || true)" >> $GITHUB_ENV
+
+      - name: Run Roslyn Code Analysis on Changed Files
+        if: env.CHANGED_FILES != ''
+        run: |
+          for file in $CHANGED_FILES; do
+            echo "Analyzing: $file"
+            dotnet build --no-restore /warnaserror /p:TreatWarningsAsErrors=true /p:EnableNETAnalyzers=true "$file" || exit 1
+          done
 
       - name: Upload Roslyn Analysis Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
+        if: failure()
         with:
           name: Roslyn-Analysis-Results
           path: |

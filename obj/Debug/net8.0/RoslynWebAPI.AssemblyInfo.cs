@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoslynWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4adf997786adeb1442e60deb10a9f37bbf9d65a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoslynWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoslynWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

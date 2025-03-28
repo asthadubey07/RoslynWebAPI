@@ -1,0 +1,65 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\RoslynWebAPI\\RoslynWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6BD2B2-4FFE-451A-AF95-7F71AE2A92F2}|RoslynWebAPI.csproj|c:\\roslynwebapi\\roslynwebapi\\roslynwebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3D6BD2B2-4FFE-451A-AF95-7F71AE2A92F2}|RoslynWebAPI.csproj|solutionrelative:roslynwebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6BD2B2-4FFE-451A-AF95-7F71AE2A92F2}|RoslynWebAPI.csproj|c:\\roslynwebapi\\roslynwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6BD2B2-4FFE-451A-AF95-7F71AE2A92F2}|RoslynWebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\RoslynWebAPI\\RoslynWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\RoslynWebAPI\\RoslynWebAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T05:20:12.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoslynWebAPI.csproj",
+              "DocumentMoniker": "C:\\RoslynWebAPI\\RoslynWebAPI\\RoslynWebAPI.csproj",
+              "RelativeDocumentMoniker": "RoslynWebAPI.csproj",
+              "ToolTip": "C:\\RoslynWebAPI\\RoslynWebAPI\\RoslynWebAPI.csproj",
+              "RelativeToolTip": "RoslynWebAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-28T05:17:08.796Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

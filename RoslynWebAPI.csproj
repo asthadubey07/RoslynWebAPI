@@ -5,8 +5,28 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+	<PropertyGroup>
+		<AnalysisLevel>latest</AnalysisLevel>
+			<Nullable>enable</Nullable>
+			<!-- Enables null reference checks -->
+			<AnalysisLevel>latest</AnalysisLevel>
+			<!-- Uses the latest Roslyn analysis rules -->
+			<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+			<!-- Enforce coding styles -->
+		<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
+			<!-- Prevents ignoring warnings -->
+			<!-- Converts null-related warnings to errors -->
+	</PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="9.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 

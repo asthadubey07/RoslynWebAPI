@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kryfy2TDWxcuieY02j5w8gEtQSOzSKKpKAXXUfOUiZM=",
+  "Source": "RoslynWebAPI",
+  "BasePath": "_content/RoslynWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

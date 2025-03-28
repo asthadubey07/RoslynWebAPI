@@ -1,24 +1,38 @@
-name: Roslyn Analyzers Check
+name: Code Analysis
 
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - dev  # Add other branches as needed
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.0.x' 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'  # Change to your .NET version
 
-    - name: Restore Dependencies
-      run: dotnet restore
+      - name: Restore Dependencies
+        run: dotnet restore
 
-    - name: Run Roslyn Analyzers
-      run: dotnet build --no-restore /warnaserror
+      - name: Run Roslyn Code Analysis
+        run: dotnet build --no-restore /warnaserror /p:TreatWarningsAsErrors=true /p:EnableNETAnalyzers=true
+
+      - name: Upload Roslyn Analysis Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Roslyn-Analysis-Results
+          path: |
+            **/bin/**/*.dll
+            **/bin/**/*.pdb
+
+      - name: Report Analysis Results
+        if: failure()
+        run: echo "❌ Roslyn Code Analysis failed. Please fix the issues before merging."
